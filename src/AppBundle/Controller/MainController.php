@@ -54,4 +54,8 @@ class MainController extends Controller
             'ex2Exit'   => $ex2Exit
         ));
     }
+
+    public function symfoAction(){
+        return $this->render('app/main/symfo.html.twig');
+    }
 }
