@@ -1,0 +1,19 @@
+GameBundle\Entity\Family:
+    type: entity
+    table: null
+    repositoryClass: GameBundle\Repository\FamilyRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        firstName:
+            type: string
+            length: '50'
+        healthPoints:
+            type: integer
+        strength:
+            type: integer
+    lifecycleCallbacks: {  }

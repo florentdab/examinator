@@ -1,0 +1,18 @@
+{% extends 'GameBundle::layout.html.twig' %}
+
+{% block title %}
+    Index - {{ parent() }}
+{% endblock %}
+
+{% block content %}
+    <h3>Houses</h3>
+    <ul>
+        <li>
+            <a href="{{ path('game_houses') }}">
+                here you can check the houses page
+            </a>
+        </li>
+    </ul>
+{% endblock %}
+
+

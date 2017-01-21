@@ -1,0 +1,20 @@
+{% extends "GameBundle::layout.html.twig" %}
+
+{% block title %}
+    Houses - {{ parent() }}
+{% endblock %}
+
+{% block content %}
+
+    <h3>House Stark</h3>
+    <h3>House Lannister</h3>
+    <h3>House targaryen</h3>
+
+
+
+
+    <a class="waves-effect waves-light btn black" href="{{ path('game_homepage') }}">
+        Home
+    </a>
+
+{% endblock %}

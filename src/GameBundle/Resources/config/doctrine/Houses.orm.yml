@@ -1,0 +1,29 @@
+GameBundle\Entity\Houses:
+    type: entity
+    table: null
+    repositoryClass: GameBundle\Repository\HousesRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: '50'
+        sigil:
+            type: string
+            length: 255
+        army:
+            type: integer
+        money:
+            type: integer
+        family:
+            type: string
+            length: 255
+    oneToMany:
+        soldiers:
+            targetEntity: GameBundle\Entity\Soldiers
+            mappedBy: houses
+    lifecycleCallbacks: {  }

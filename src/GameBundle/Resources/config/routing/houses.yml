@@ -1,0 +1,12 @@
+houses_index:
+    path:     /
+    defaults: { _controller: "GameBundle:Houses:index" }
+    methods:  GET
+
+houses_show:
+    path:     /{id}/show
+    defaults: { _controller: "GameBundle:Houses:show" }
+    methods:  GET
+
+
+

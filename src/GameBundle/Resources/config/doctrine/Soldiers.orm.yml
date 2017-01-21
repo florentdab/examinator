@@ -1,0 +1,28 @@
+GameBundle\Entity\Soldiers:
+    type: entity
+    table: null
+    repositoryClass: GameBundle\Repository\SoldiersRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        type:
+            type: string
+            length: 255
+        cost:
+            type: integer
+        healthPoints:
+            type: integer
+        strength:
+            type: integer
+    manyToOne:
+        House:
+            targetEntity: GameBundle\Entity\Houses
+            inversedBy: soldiers
+            joincolumn:
+                name: houses_id
+                referencedcolumnName: id
+    lifecycleCallbacks: {  }

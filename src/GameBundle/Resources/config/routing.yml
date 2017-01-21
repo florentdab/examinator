@@ -1,0 +1,12 @@
+game:
+    resource: "@GameBundle/Resources/config/routing/houses.yml"
+    prefix:   /game-of-thrones
+
+game_homepage:
+    path:     /
+    defaults: { _controller: GameBundle:Default:index }
+
+game_houses:
+    path:   /houses
+    defaults:
+        _controller: GameBundle:Default:house
