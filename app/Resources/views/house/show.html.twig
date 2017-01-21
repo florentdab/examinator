@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>House</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ house.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ house.name }}</td>
+            </tr>
+            <tr>
+                <th>Sigil</th>
+                <td>{{ house.sigil }}</td>
+            </tr>
+            <tr>
+                <th>Money</th>
+                <td>{{ house.money }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('house_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,12 @@
+house_index:
+    path:     /
+    defaults: { _controller: "GotBundle:House:index" }
+    methods:  GET
+
+house_show:
+    path:     /{id}/show
+    defaults: { _controller: "GotBundle:House:show" }
+    methods:  GET
+
+
+
