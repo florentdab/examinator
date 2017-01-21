@@ -1,0 +1,29 @@
+GotBundle\Entity\House:
+    type: entity
+    table: null
+    repositoryClass: GotBundle\Repository\HouseRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        sigil:
+            type: string
+            length: 255
+        money:
+            type: integer
+            nullable: true
+
+    ManyToOne:
+        soldiers:
+            targetEntity: Soldiers
+          #  inversedBy: interviews
+            joinColumn:
+              name: soldiers_id
+              referencedColumnName: id
+    lifecycleCallbacks: {  }

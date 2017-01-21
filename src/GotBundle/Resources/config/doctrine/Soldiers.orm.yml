@@ -1,0 +1,22 @@
+GotBundle\Entity\Soldiers:
+    type: entity
+    table: null
+    repositoryClass: GotBundle\Repository\SoldiersRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        type:
+            type: string
+            length: 255
+        cost:
+            type: integer
+        hp:
+            type: integer
+            nullable: true
+        strength:
+            type: integer
+    lifecycleCallbacks: {  }

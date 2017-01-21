@@ -1,0 +1,3 @@
+got_homepage:
+    path:     /
+    defaults: { _controller: GotBundle:Default:index }

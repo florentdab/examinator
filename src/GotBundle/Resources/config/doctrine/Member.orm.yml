@@ -1,0 +1,20 @@
+GotBundle\Entity\Member:
+    type: entity
+    table: null
+    repositoryClass: GotBundle\Repository\MemberRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        firstname:
+            type: string
+            length: 255
+        hp:
+            type: integer
+            nullable: true
+        strength:
+            type: integer
+    lifecycleCallbacks: {  }
