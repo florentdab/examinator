@@ -2,54 +2,63 @@
 
 {% block content %}
     <div class="container">
-        <h2 class="center-align">Algo</h2>
-        <h3>Exercice 1</h3>
+        <h1 class="center-align">Algo</h1>
+        <hr>
+        <p>Vous travaillerez dans AlgoController</p>
+        <p>Pour lancer les tests :</p>
+        <p>Pour l'exercice 1 :</p>
+        <p><code>phpunit tests/AppBundle/Controller/Exercice1ControllerTest.php</code> </p>
+        <p>Pour l'exercice 2 :</p>
+        <p><code>phpunit tests/AppBundle/Controller/Exercice2ControllerTest.php</code> </p>
+        <hr>
+        <h2>Exercice 1</h2>
 
-        <h4>Objectifs :</h4>
+        <h3>Objectifs :</h3>
 
         <p>Trouver toutes les combinaisons de couleurs possibles et les renvoyer sous forme de code rgb OU rgba</p>
 
-        <h5>En entrée :</h5>
+        <h4>En entrée :</h4>
         <p>Des codes couleurs allant de 0 à 255 et possiblement des transparences allant de 0 à 1</p>
 
-        <h5>En sortie :</h5>
+        <h4>En sortie :</h4>
         <p>Les codes rgb ou rgba dans l'ordre (toutes les combinaisons possibles avec le premier, puis avec le second, etc...)</p>
 
-        <h5>Exemple : </h5>
+        <h4>Exemple : </h4>
         <div class="container">
             <div class="row">
                 <div class="col s6">
-                    <h6>En entrée</h6>
+                    <h5>En entrée</h5>
                     {{ dump(ex1Entry) }}
                 </div>
                 <div class="col s6">
-                    <h6>En sortie</h6>
+                    <h5>En sortie</h5>
                     {{ dump(ex1Exit) }}
                 </div>
             </div>
         </div>
 
-        <h3>Exercice 2</h3>
+        <hr>
+        <h2>Exercice 2</h2>
 
-        <h4>Objectifs :</h4>
+        <h3>Objectifs :</h3>
 
-        <p>Lister les personnages encore en vie par famille</p>
+        <p>Lister les personnages encore en vie par famille. Vous avez la liste des personnages dans AlgoController.</p>
 
-        <h5>En entrée :</h5>
+        <h4>En entrée :</h4>
         <p>Une liste des roles des personnages tués</p>
 
-        <h5>En sortie :</h5>
+        <h4>En sortie :</h4>
         <p>La liste des personnages encore en vie, triés par famille, avec leur prénom et leur role</p>
 
-        <h5>Exemple : </h5>
+        <h4>Exemple : </h4>
         <div class="container">
             <div class="row">
                 <div class="col s6">
-                    <h6>En entrée</h6>
+                    <h5>En entrée</h5>
                     {{ dump(ex2Entry) }}
                 </div>
                 <div class="col s6">
-                    <h6>En sortie</h6>
+                    <h5>En sortie</h5>
                     {{ dump(ex2Exit) }}
                 </div>
             </div>
