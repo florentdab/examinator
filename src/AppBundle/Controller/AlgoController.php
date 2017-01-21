@@ -15,7 +15,16 @@ class AlgoController extends Controller
 {
     public function exercice1($array){
 
-        //Write your code here
+        foreach ( $array as $value){
+            foreach ( current($array[0]) as $val ){
+            $val ++ ;
+            };
+        }
+
+/* C'est une attaque par force brute mon dieu !!!!
+Pour chaque couleur, incrémenter de 1
+Si trois caractères de suite sont identiques, on passe à la combinaison suivante;
+sinon on décale le test d'un caractère et ce jusqu'à avoir testé toute la combinaison */
 
     }
 
@@ -32,7 +41,18 @@ class AlgoController extends Controller
 
         $personnages = [$jaime, $arya, $daenerys, $theon, $cersei, $bran, $oberyn, $doran];
 
-        //Write your code here
 
+        foreach ($personnages as $person){
+           if ($person["role"] !== $array){
+                $result = $person["prenom"]["role"] ;
+                }
+            }
+            return $result ;
+/* Pour chaque personnage on vérifie si il est mort on non,
+    si oui alors on ne l'affiche pas, on l'enlève du tableau,
+    si non alors on l'affiche dans le tableau.
+   Ensuite on affiche par famille leur prénom et leur role. Pour cela tout ceux qui on le même nom
+(on test cette condition avec un if) si même nom alors même famille.
+*/
     }
 }
