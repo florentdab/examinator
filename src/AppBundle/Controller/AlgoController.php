@@ -13,12 +13,14 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class AlgoController extends Controller
 {
-    public function exercice1($array){
+    public function exercice1($array)
+    {
+        foreach ($array as $color) {
+            foreach ($color as $code) {
 
-        //Write your code here
-
+            }
+        }
     }
-
     public function exercice2($array){
 
         $jaime = ["nom" => "Lannister", "prenom" => "Jaime", "role" => "Kingslayer"];
@@ -32,7 +34,13 @@ class AlgoController extends Controller
 
         $personnages = [$jaime, $arya, $daenerys, $theon, $cersei, $bran, $oberyn, $doran];
 
-        //Write your code here
 
+        foreach ($personnages as $personnage) {
+            foreach ($personnage as $key => $value){
+                if(in_array($array, $value)) { // Si le tableau contient une valeur égale à celle de $array
+                }
+                return $personnage;
+            }
+        }
     }
 }
