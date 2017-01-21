@@ -80,5 +80,33 @@ class FamilyMember
     {
         return $this->healthPoints;
     }
-}
+    /**
+     * @var integer
+     */
+    private $strength;
 
+
+    /**
+     * Set strength
+     *
+     * @param integer $strength
+     *
+     * @return FamilyMember
+     */
+    public function setStrength($strength)
+    {
+        $this->strength = $strength;
+
+        return $this;
+    }
+
+    /**
+     * Get strength
+     *
+     * @return integer
+     */
+    public function getStrength()
+    {
+        return $this->strength;
+    }
+}

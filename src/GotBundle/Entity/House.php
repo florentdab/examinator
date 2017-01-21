@@ -109,4 +109,50 @@ class House
     {
         return $this->money;
     }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $soldiers;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->soldiers = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add soldier
+     *
+     * @param \GotBundle\Entity\Soldier $soldier
+     *
+     * @return House
+     */
+    public function addSoldier(\GotBundle\Entity\Soldier $soldier)
+    {
+        $this->soldiers[] = $soldier;
+
+        return $this;
+    }
+
+    /**
+     * Remove soldier
+     *
+     * @param \GotBundle\Entity\Soldier $soldier
+     */
+    public function removeSoldier(\GotBundle\Entity\Soldier $soldier)
+    {
+        $this->soldiers->removeElement($soldier);
+    }
+
+    /**
+     * Get soldiers
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getSoldiers()
+    {
+        return $this->soldiers;
+    }
 }

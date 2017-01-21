@@ -138,4 +138,33 @@ class Soldier
     {
         return $this->strength;
     }
+    /**
+     * @var \GotBundle\Entity\House
+     */
+    private $house;
+
+
+    /**
+     * Set house
+     *
+     * @param \GotBundle\Entity\House $house
+     *
+     * @return Soldier
+     */
+    public function setHouse(\GotBundle\Entity\House $house = null)
+    {
+        $this->house = $house;
+
+        return $this;
+    }
+
+    /**
+     * Get house
+     *
+     * @return \GotBundle\Entity\House
+     */
+    public function getHouse()
+    {
+        return $this->house;
+    }
 }

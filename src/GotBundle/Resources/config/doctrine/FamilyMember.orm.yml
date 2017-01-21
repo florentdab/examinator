@@ -16,4 +16,12 @@ GotBundle\Entity\FamilyMember:
             type: integer
         strength:
             type: integer
+
+    manyToOne:
+        house:
+            targetEntity: GotBundle\Entity\House
+            inversedBy: familyMembers
+            joinColumn:
+                name: house_id
+                referencedColumnName: id
     lifecycleCallbacks: {  }

@@ -19,4 +19,14 @@ GotBundle\Entity\House:
         money:
             type: integer
             nullable: true
+
+    oneToMany:
+        soldiers:
+            targetEntity: GotBundle\Entity\Soldier
+            mappedBy: house
+
+    oneToMany:
+        familyMembers:
+            targetEntity: GotBundle\Entity\FamilyMember
+            mappedBy: house
     lifecycleCallbacks: {  }

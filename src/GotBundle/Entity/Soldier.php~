@@ -139,4 +139,3 @@ class Soldier
         return $this->strength;
     }
 }
-
