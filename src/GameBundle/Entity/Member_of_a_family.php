@@ -110,4 +110,3 @@ class Member_of_a_family
         return $this->strength;
     }
 }
-

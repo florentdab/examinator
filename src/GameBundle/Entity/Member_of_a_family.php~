@@ -3,9 +3,9 @@
 namespace GameBundle\Entity;
 
 /**
- * Soldiers
+ * Member_of_a_family
  */
-class Soldiers
+class Member_of_a_family
 {
     /**
      * @var int
@@ -15,12 +15,7 @@ class Soldiers
     /**
      * @var string
      */
-    private $type;
-
-    /**
-     * @var string
-     */
-    private $cost;
+    private $firstName;
 
     /**
      * @var int
@@ -44,51 +39,27 @@ class Soldiers
     }
 
     /**
-     * Set type
+     * Set firstName
      *
-     * @param string $type
+     * @param string $firstName
      *
-     * @return Soldiers
+     * @return Member_of_a_family
      */
-    public function setType($type)
+    public function setFirstName($firstName)
     {
-        $this->type = $type;
+        $this->firstName = $firstName;
 
         return $this;
     }
 
     /**
-     * Get type
+     * Get firstName
      *
      * @return string
      */
-    public function getType()
+    public function getFirstName()
     {
-        return $this->type;
-    }
-
-    /**
-     * Set cost
-     *
-     * @param string $cost
-     *
-     * @return Soldiers
-     */
-    public function setCost($cost)
-    {
-        $this->cost = $cost;
-
-        return $this;
-    }
-
-    /**
-     * Get cost
-     *
-     * @return string
-     */
-    public function getCost()
-    {
-        return $this->cost;
+        return $this->firstName;
     }
 
     /**
@@ -96,7 +67,7 @@ class Soldiers
      *
      * @param integer $healthPoints
      *
-     * @return Soldiers
+     * @return Member_of_a_family
      */
     public function setHealthPoints($healthPoints)
     {
@@ -120,7 +91,7 @@ class Soldiers
      *
      * @param integer $strength
      *
-     * @return Soldiers
+     * @return Member_of_a_family
      */
     public function setStrength($strength)
     {
@@ -139,3 +110,4 @@ class Soldiers
         return $this->strength;
     }
 }
+

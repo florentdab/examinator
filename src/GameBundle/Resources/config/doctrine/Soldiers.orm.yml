@@ -20,4 +20,17 @@ GameBundle\Entity\Soldiers:
             column: health_points
         strength:
             type: integer
+
+    manyToMany:
+        houses:
+          targetEntity: Houses
+          inversedBy: soldiers
+          joinTable:
+            name: soldiers_groups
+            joinColumns:
+              houses_id:
+                referencedColumnName: id
+            inverseJoinColumns:
+              soldiers_id:
+                referencedColumnName: id
     lifecycleCallbacks: {  }

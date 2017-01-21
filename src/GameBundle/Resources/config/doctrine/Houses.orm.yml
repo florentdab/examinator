@@ -27,4 +27,14 @@ GameBundle\Entity\Houses:
             type: string
             length: 255
             column: members_of_the_family
+
+        oneToMany:
+            members_of_a_family:
+                targetEntity: Member_of_a_family
+                mappedBy: houses
+
+        manyToMany:
+            soldiers:
+              targetEntity: Soldiers
+              mappedBy: houses
     lifecycleCallbacks: {  }

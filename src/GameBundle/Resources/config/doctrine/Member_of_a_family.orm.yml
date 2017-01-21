@@ -18,4 +18,13 @@ GameBundle\Entity\Member_of_a_family:
             column: health_points
         strength:
             type: integer
+
+    manyToOne:
+            houses:
+                targetEntity: Houses
+                inversedBy: member_of_a_family
+                joinColumn:
+                    name: houses_id
+                    referencedColumnName: id
+                    onDelete: CASCADE
     lifecycleCallbacks: {  }
