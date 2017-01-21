@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Soldier</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ soldier.id }}</td>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <td>{{ soldier.type }}</td>
+            </tr>
+            <tr>
+                <th>Cost</th>
+                <td>{{ soldier.cost }}</td>
+            </tr>
+            <tr>
+                <th>Healthpoints</th>
+                <td>{{ soldier.healthPoints }}</td>
+            </tr>
+            <tr>
+                <th>Strength</th>
+                <td>{{ soldier.strength }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('soldiers_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('soldiers_edit', { 'id': soldier.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Member_of_a_families list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Firstname</th>
+                <th>Healthpoints</th>
+                <th>Strength</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for member_of_a_family in member_of_a_families %}
+            <tr>
+                <td><a href="{{ path('member_of_a_family_show', { 'id': member_of_a_family.id }) }}">{{ member_of_a_family.id }}</a></td>
+                <td>{{ member_of_a_family.firstName }}</td>
+                <td>{{ member_of_a_family.healthPoints }}</td>
+                <td>{{ member_of_a_family.strength }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('member_of_a_family_show', { 'id': member_of_a_family.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

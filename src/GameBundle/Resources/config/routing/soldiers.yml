@@ -1,0 +1,24 @@
+soldiers_index:
+    path:     /
+    defaults: { _controller: "GameBundle:Soldiers:index" }
+    methods:  GET
+
+soldiers_show:
+    path:     /{id}/show
+    defaults: { _controller: "GameBundle:Soldiers:show" }
+    methods:  GET
+
+soldiers_new:
+    path:     /new
+    defaults: { _controller: "GameBundle:Soldiers:new" }
+    methods:  [GET, POST]
+
+soldiers_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "GameBundle:Soldiers:edit" }
+    methods:  [GET, POST]
+
+soldiers_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "GameBundle:Soldiers:delete" }
+    methods:  DELETE

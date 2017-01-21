@@ -1,3 +1,16 @@
+game_member_of_a_family:
+    resource: "@GameBundle/Resources/config/routing/member_of_a_family.yml"
+    prefix:   /member_of_a_family
+
 game_homepage:
     path:     /
     defaults: { _controller: GameBundle:Default:index }
+
+game_houses:
+        resource: "@GameBundle/Resources/config/routing/houses.yml"
+        prefix:   /houses
+
+game_soldiers:
+        resource: "@GameBundle/Resources/config/routing/soldiers.yml"
+        prefix:   /soldiers
+

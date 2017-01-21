@@ -1,0 +1,12 @@
+member_of_a_family_index:
+    path:     /
+    defaults: { _controller: "GameBundle:Member_of_a_family:index" }
+    methods:  GET
+
+member_of_a_family_show:
+    path:     /{id}/show
+    defaults: { _controller: "GameBundle:Member_of_a_family:show" }
+    methods:  GET
+
+
+
