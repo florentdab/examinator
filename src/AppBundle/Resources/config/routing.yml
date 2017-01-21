@@ -1,3 +1,7 @@
 app_homepage:
     path:     /
     defaults: { _controller: AppBundle:Main:index }
+
+app_symfo:
+    path:     /symfony
+    defaults: { _controller: AppBundle:Main:symfo }
