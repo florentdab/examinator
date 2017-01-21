@@ -16,8 +16,27 @@ class AlgoController extends Controller
     public function exercice1($array){
 
         //Write your code here
+        // je fais un boucle qui va chercher et stocker la premiere valeur du premier talbeau ,  ensuite je fait une autre boucle avec une condition pour recuperer la premiere valeur tu tableeau 2 et du tableau 3 et recommencer avec la meme valeur du tableau 1 tant que le tableau 2 et 3 n'auront pas ete parcourur.
 
+        $count= "";
+        foreach($array[0] as $a ){
+
+            $count .= $array[0][$a];
+
+            foreach($array[1] as $b){
+                $count.= $array[1][$b];
+            }
+            foreach($array[1] as $b){
+                $count.= $array[1][$b];
+            }
+        }
+        return $count;
+        //var_dump($array[0][0]);
     }
+
+
+
+}
 
     public function exercice2($array){
 
