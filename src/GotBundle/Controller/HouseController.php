@@ -21,9 +21,11 @@ class HouseController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $houses = $em->getRepository('GotBundle:House')->findAll();
+        $familyMembers = $em->getRepository('GotBundle:FamilyMember')->getFamilyMembersByHouse();
 
         return $this->render('house/index.html.twig', array(
             'houses' => $houses,
+            'familyMembers' => $familyMembers,
         ));
     }
 

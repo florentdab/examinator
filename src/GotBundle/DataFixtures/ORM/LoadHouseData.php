@@ -25,7 +25,7 @@ class LoadHouseData extends AbstractFixture implements OrderedFixtureInterface
         //Create the first House
         $house1 = new House();
         $house1->setName('Stark');
-        $house1->setSigil('starksigil.png');
+        $house1->setSigil('/images/starksigil.png');
         $house1->setMoney(1000);
         $this->addReference('StarkHouse', $house1);
 
@@ -34,7 +34,7 @@ class LoadHouseData extends AbstractFixture implements OrderedFixtureInterface
         //Create the second House
         $house2 = new House();
         $house2->setName('Lannister');
-        $house2->setSigil('sigil1.png');
+        $house2->setSigil('/images/sigil1.png');
         $house2->setMoney(2000);
         $this->addReference('LannisterHouse', $house2);
 
@@ -43,7 +43,7 @@ class LoadHouseData extends AbstractFixture implements OrderedFixtureInterface
         //Create the third House
         $house3 = new House();
         $house3->setName('Targaryen');
-        $house3->setSigil('dragon1.png');
+        $house3->setSigil('/images/dragon1.png');
         $house3->setMoney(0);
         $this->addReference('TargaryenHouse', $house3);
 

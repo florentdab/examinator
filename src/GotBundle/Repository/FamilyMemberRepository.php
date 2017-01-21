@@ -10,4 +10,11 @@ namespace GotBundle\Repository;
  */
 class FamilyMemberRepository extends \Doctrine\ORM\EntityRepository
 {
+    function getFamilyMembersByHouse() {
+        $qb = $this->createQueryBuilder('fm'); // on crée un alias "m" qui correspond à la table Hotel
+        $qb ->select("fm.firstName")
+            ->join("fm.house", "h") // permet de faire une jointure vers la table house en utilisant l'alias de house
+            ->groupBy('fm.house');
+        return $qb->getQuery()->getResult(); // retourne le résultat de la recherche.
+    }
 }

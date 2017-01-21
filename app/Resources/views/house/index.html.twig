@@ -1,29 +1,32 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Houses list</h1>
+    <h1>Game of Thrones</h1>
+    <h2>Liste des maisons concurrentes.</h2>
 
     <table>
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Sigil</th>
-                <th>Money</th>
+                <th>Ecusson de la maison</th>
+                <th>Nom</th>
+                <th>Argent disponible</th>
+                <th>Membre principal</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
         {% for house in houses %}
             <tr>
-                <td><a href="{{ path('house_show', { 'id': house.id }) }}">{{ house.id }}</a></td>
-                <td>{{ house.name }}</td>
                 <td>{{ house.sigil }}</td>
+                <td>{{ house.name }}</td>
                 <td>{{ house.money }}</td>
+                {% for familyMember in familyMembers %}
+                    <td>{{ familyMember.firstName }}</td>
+                {% endfor %}
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('house_show', { 'id': house.id }) }}">show</a>
+                            <a href="{{ path('house_show', { 'id': house.id }) }}">En savoir plus</a>
                         </li>
                     </ul>
                 </td>
@@ -32,5 +35,5 @@
         </tbody>
     </table>
 
-    
+
 {% endblock %}
