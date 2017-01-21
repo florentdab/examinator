@@ -3,6 +3,7 @@
 {% block body %}
     <h1>House</h1>
 
+    <h2>Informations</h2>
     <table>
         <tbody>
             <tr>
@@ -15,7 +16,7 @@
             </tr>
             <tr>
                 <th>Sigil</th>
-                <td>{{ house.sigil }}</td>
+                <td><img src="{{ house.sigil }}"></td>
             </tr>
             <tr>
                 <th>Money</th>
@@ -23,6 +24,12 @@
             </tr>
         </tbody>
     </table>
+
+    <h2>Chef de la maison</h2>
+    {# ici il faudrait ajouter un lien vers les infos du member lié à cette maison, en lui passant un array dans le controleur, mais j'ai pas l'temps#}
+
+    <h2>Armée</h2>
+    {#ici il faudrait faire la meme chose mais avec chaque soldat qui appartiendrait à la maison en question, avec un for...in. mais pas le temps et surtout liaisons pas faites#}
 
     <ul>
         <li>

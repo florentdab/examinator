@@ -27,18 +27,21 @@ class LoadMemberData extends AbstractFixture implements OrderedFixtureInterface
         $characters = array(
             array("Robb", "1200", "80"),
             array("Cersei", "300", "32"),
-            array("Daenerys with Balerion", "2000", "91")
+            array("Daenerys", "2000", "91")
         );
         foreach ($characters as $character) {
             $memberObj = new Member();
             $memberObj->setFirstname($character[0]);
             $memberObj->setHp($character[1]);
             $memberObj->setStrength($character[2]);
+            $this->addReference('member-'.$character[0], $memberObj);
 
             $manager->persist($memberObj);
-            $manager->flush();
-            //$this->getReference('member-family', $memberObj);
+
         }
+        $manager->flush();
+
+
 
 
 

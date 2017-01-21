@@ -24,16 +24,17 @@ class LoadHouseData extends AbstractFixture implements OrderedFixtureInterface
     public function load(ObjectManager $manager)
     {
         $houses = array(
-            array("Stark", "starksigil.png", "1000"),
-            array("Lannister", "sigillannister.png", "2000"),
-            array("Targaryen", "sigiltargaryen.png", "0")
+            array("Stark", "starksigil.png", "1000", "member-Robb"),
+            array("Lannister", "sigillannister.png", "2000", "member-Cersei"),
+            array("Targaryen", "sigiltargaryen.png", "0", "member-Daenerys")
         );
         foreach ($houses as $house) {
             $houseObj = new House();
             $houseObj->setName($house[0]);
             $houseObj->setSigil($house[1]);
             $houseObj->setMoney($house[2]);
-            //$houseObj->setMember($house[3]);
+
+            $houseObj->setMember($this->getReference($house[3]));
 
             $manager->persist($houseObj);
             unset($houseObj);
