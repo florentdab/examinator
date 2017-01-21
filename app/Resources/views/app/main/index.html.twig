@@ -1,5 +1,59 @@
 {% extends 'app/layout.html.twig' %}
 
 {% block content %}
-    <h2>Page index</h2>
+    <div class="container">
+        <h2 class="center-align">Algo</h2>
+        <h3>Exercice 1</h3>
+
+        <h4>Objectifs :</h4>
+
+        <p>Trouver toutes les combinaisons de couleurs possibles et les renvoyer sous forme de code rgb OU rgba</p>
+
+        <h5>En entrée :</h5>
+        <p>Des codes couleurs allant de 0 à 255 et possiblement des transparences allant de 0 à 1</p>
+
+        <h5>En sortie :</h5>
+        <p>Les codes rgb ou rgba dans l'ordre (toutes les combinaisons possibles avec le premier, puis avec le second, etc...)</p>
+
+        <h5>Exemple : </h5>
+        <div class="container">
+            <div class="row">
+                <div class="col s6">
+                    <h6>En entrée</h6>
+                    {{ dump(ex1Entry) }}
+                </div>
+                <div class="col s6">
+                    <h6>En sortie</h6>
+                    {{ dump(ex1Exit) }}
+                </div>
+            </div>
+        </div>
+
+        <h3>Exercice 2</h3>
+
+        <h4>Objectifs :</h4>
+
+        <p>Lister les personnages encore en vie par famille</p>
+
+        <h5>En entrée :</h5>
+        <p>Une liste des roles des personnages tués</p>
+
+        <h5>En sortie :</h5>
+        <p>La liste des personnages encore en vie, triés par famille, avec leur prénom et leur role</p>
+
+        <h5>Exemple : </h5>
+        <div class="container">
+            <div class="row">
+                <div class="col s6">
+                    <h6>En entrée</h6>
+                    {{ dump(ex2Entry) }}
+                </div>
+                <div class="col s6">
+                    <h6>En sortie</h6>
+                    {{ dump(ex2Exit) }}
+                </div>
+            </div>
+        </div>
+
+    </div>
 {% endblock %}
