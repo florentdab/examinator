@@ -1,0 +1,30 @@
+GameBundle\Entity\Houses:
+    type: entity
+    table: null
+    repositoryClass: GameBundle\Repository\HousesRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: '30'
+            unique: true
+        sigil:
+            type: string
+            length: 255
+            column: Sigil
+        army:
+            type: string
+            length: 255
+        amountOfMoney:
+            type: integer
+            column: amount_of_money
+        membersOfTheFamily:
+            type: string
+            length: 255
+            column: members_of_the_family
+    lifecycleCallbacks: {  }
