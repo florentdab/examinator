@@ -19,11 +19,16 @@ GotBundle\Entity\House:
             type: integer
             nullable: true
 
-    ManyToOne:
+    oneToMany:
         soldiers:
-            targetEntity: Soldiers
-          #  inversedBy: interviews
+          targetEntity: Soldiers
+          mappedBy: house
+
+    oneToOne:
+        member:
+            targetEntity: Member
+            inversedBy: houses
             joinColumn:
-              name: soldiers_id
+              name: member_id
               referencedColumnName: id
     lifecycleCallbacks: {  }

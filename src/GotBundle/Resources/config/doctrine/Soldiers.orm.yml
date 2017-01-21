@@ -19,4 +19,12 @@ GotBundle\Entity\Soldiers:
             nullable: true
         strength:
             type: integer
+
+    manyToOne:
+        house:
+            targetEntity: House
+            inversedBy: soldiers
+            joinColumn:
+              name: house_id
+              referencedColumnName: id
     lifecycleCallbacks: {  }
