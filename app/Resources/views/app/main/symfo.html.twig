@@ -1,10 +1,212 @@
-{% extends 'app/layout.html.twig' %}
+{% extends 'base.html.twig' %}
 
-{% block content %}
+{% block body %}
     <div class="container">
         <div class="row">
             <h1 class="center-align">Symfony</h1>
-
+            <h2 class="center-align">Game of Thrones</h2>
+            <hr>
+            <h3 class="center-align">Objectives</h3>
+            <hr>
+            <p>You're going to create an app where Game of Thrones families will fight for Westeros !</p>
+            <hr>
+            <h3 class="center-align">Instructions</h3>
+            <hr>
+            <p>Display a list of houses (see fixtures below), and add the possibility of consulting each house page, where visitor will be able to see house's army, members, amount of money and sigil</p>
+            <hr>
+            <h4 class="center-align">The app needs</h4>
+            <hr>
+            <h5 class="center-align">Defined data (can't be created/modified by visitor)</h5>
+            <hr>
+            <div class="row">
+                <div class="col s12 m4">
+                    <div class="card white z-depth-3">
+                        <div class="card-content black-text">
+                            <span class="card-title">Houses</span>
+                            <ul class="browser-default">
+                                <li>name</li>
+                                <li>Sigil (picture of the house)</li>
+                                <li>army composed by different kinds of soldiers</li>
+                                <li>amount of money</li>
+                                <li>members of the family</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card white z-depth-3">
+                        <div class="card-content black-text">
+                            <span class="card-title">Soldiers</span>
+                            <ul class="browser-default">
+                                <li>type</li>
+                                <li>cost</li>
+                                <li>health points</li>
+                                <li>strength (between 0 and 100)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card white z-depth-3">
+                        <div class="card-content black-text">
+                            <span class="card-title">Member of a family</span>
+                            <ul class="browser-default">
+                                <li>first name</li>
+                                <li>health points</li>
+                                <li>strength (between 0 and 100)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <h5 class="center-align">Fixtures</h5>
+            <hr>
+            <div class="row">
+                <div class="col s12 m4">
+                    <div class="card grey darken-4 z-depth-3">
+                        <div class="card-content white-text">
+                            <div class="card-title center-align"><h5>House Stark</h5></div>
+                            <img class="responsive-img" src="https://computerscience.johncabot.edu/mscaramastra/S2015/CS130-2/Pacitto/game%20of%20thrones/images/starksigil.png">
+                            <ul class="browser-default">
+                                <li>name : Stark</li>
+                                <li>army : none</li>
+                                <li>1000 dragons</li>
+                                <li>
+                                    <ul class="browser-default">
+                                        <li>Robb</li>
+                                        <li>1200 health points</li>
+                                        <li>82</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card red darken-4 z-depth-3">
+                        <div class="card-content amber-text">
+                            <div class="card-title center-align"><h5>House Lannister</h5></div>
+                            <img class="responsive-img" src="https://computerscience.johncabot.edu/mscaramastra/S2015/CS130-2/Pacitto/game%20of%20thrones/images/sigil1.png">
+                            <ul class="browser-default">
+                                <li>name : Lannister</li>
+                                <li>army : none</li>
+                                <li>2000 dragons</li>
+                                <li>
+                                    <ul class="browser-default">
+                                        <li>Cersei</li>
+                                        <li>300 health points</li>
+                                        <li>32</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card black z-depth-3">
+                        <div class="card-content red-text">
+                            <div class="card-title center-align"><h5>House Targaryen</h5></div>
+                            <img class="responsive-img" src="https://computerscience.johncabot.edu/mscaramastra/S2015/CS130-2/Pacitto/game%20of%20thrones/images/dragon1.png">
+                            <ul class="browser-default">
+                                <li>name : Targaryen</li>
+                                <li>army : none</li>
+                                <li>0 dragon</li>
+                                <li>
+                                    <ul class="browser-default">
+                                        <li>Daenerys with Balerion (her dragon)</li>
+                                        <li>2000 health points</li>
+                                        <li>91</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col s12 m4">
+                    <div class="card white z-depth-3">
+                        <div class="card-content black-text">
+                            <div class="card-title center-align"><h5>Soldier Footman</h5></div>
+                            <ul class="browser-default">
+                                <li>type : footman</li>
+                                <li>100 dragons</li>
+                                <li>400</li>
+                                <li>50</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card white z-depth-3">
+                        <div class="card-content black-text">
+                            <div class="card-title center-align"><h5>Soldier Archer</h5></div>
+                            <ul class="browser-default">
+                                <li>type : archer</li>
+                                <li>200 dragons</li>
+                                <li>200</li>
+                                <li>60</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card white z-depth-3">
+                        <div class="card-content black-text">
+                            <div class="card-title center-align"><h5>Soldier Knight</h5></div>
+                            <ul class="browser-default">
+                                <li>type : footman</li>
+                                <li>400 dragons</li>
+                                <li>600</li>
+                                <li>70</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <h5 class="center-align">Visitors abilities</h5>
+            <hr>
+            <div class="row">
+                <div class="col s12">
+                    <div class="card white z-depth-3">
+                        <div class="card-content black-text">
+                            <span class="card-title">See</span>
+                            <ul class="browser-default">
+                                <li>list of all the houses, with their members names</li>
+                                <li>a specific house page, with their members (full informations) and armies(list of soldiers ordered by types, with their count)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12">
+                    <div class="card white z-depth-3">
+                        <div class="card-content black-text">
+                            <span class="card-title">Bonus 1 : Add</span>
+                            <ul class="browser-default">
+                                <li>Soldiers to an army (pay attention that visitor should not be able to spend more than a house money</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12">
+                    <div class="card white z-depth-3">
+                        <div class="card-content black-text">
+                            <span class="card-title">Bonus 2 : Play</span>
+                            <ul class="browser-default">
+                                <li>Select 2 houses</li>
+                                <li>Make them fight with this rule :</li>
+                                <li>1 soldier from the 2 houses are picked randomly</li>
+                                <li>They both roll a dice of 100, if result < strength, they land a hit on ennemy and deal the dice amount of dmg (ennemy lose same health points)</li>
+                                <li>When a soldier dies, an other one is picked from his family, and fight</li>
+                                <li>When no more soldiers are left, his House has lost the game</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 {% endblock %}
