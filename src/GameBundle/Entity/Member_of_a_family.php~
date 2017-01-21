@@ -109,5 +109,33 @@ class Member_of_a_family
     {
         return $this->strength;
     }
-}
+    /**
+     * @var \GameBundle\Entity\Houses
+     */
+    private $houses;
 
+
+    /**
+     * Set houses
+     *
+     * @param \GameBundle\Entity\Houses $houses
+     *
+     * @return Member_of_a_family
+     */
+    public function setHouses(\GameBundle\Entity\Houses $houses = null)
+    {
+        $this->houses = $houses;
+
+        return $this;
+    }
+
+    /**
+     * Get houses
+     *
+     * @return \GameBundle\Entity\Houses
+     */
+    public function getHouses()
+    {
+        return $this->houses;
+    }
+}

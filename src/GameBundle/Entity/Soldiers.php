@@ -138,4 +138,50 @@ class Soldiers
     {
         return $this->strength;
     }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $houses;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->houses = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add house
+     *
+     * @param \GameBundle\Entity\Houses $house
+     *
+     * @return Soldiers
+     */
+    public function addHouse(\GameBundle\Entity\Houses $house)
+    {
+        $this->houses[] = $house;
+
+        return $this;
+    }
+
+    /**
+     * Remove house
+     *
+     * @param \GameBundle\Entity\Houses $house
+     */
+    public function removeHouse(\GameBundle\Entity\Houses $house)
+    {
+        $this->houses->removeElement($house);
+    }
+
+    /**
+     * Get houses
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getHouses()
+    {
+        return $this->houses;
+    }
 }
