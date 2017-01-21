@@ -1,11 +1,11 @@
 <?php
 namespace GameBundle\DataFixtures\ORM;
 
-use Doctrine\Common\DataFixtures\FixtureInterface;
+use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use GameBundle\Entity\Soldiers;
 
-class LoadSoldiersData
+class LoadSoldiersData implements OrderedFixtureInterface
 {
     public function load(ObjectManager $manager)
     {
@@ -33,6 +33,13 @@ class LoadSoldiersData
         $manager->persist($soldiers3);
 
         $manager->flush();
+    }
+
+    public function getOrder()
+    {
+        // the order in which fixtures will be loaded
+        // the lower the number, the sooner that this fixture is loaded
+        return 3;
     }
 
 
