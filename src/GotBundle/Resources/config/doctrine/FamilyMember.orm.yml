@@ -1,0 +1,19 @@
+GotBundle\Entity\FamilyMember:
+    type: entity
+    table: null
+    repositoryClass: GotBundle\Repository\FamilyMemberRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        firstName:
+            type: string
+            length: 255
+        healthPoints:
+            type: integer
+        strength:
+            type: integer
+    lifecycleCallbacks: {  }
