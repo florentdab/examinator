@@ -8,12 +8,13 @@
 
 namespace GameBundle\DataFixtures\ORM;
 
+use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use GameBundle\Entity\Member_of_a_family;
 
 
-class LoadMemberData implements OrderedFixtureInterface
+class LoadMemberData extends AbstractFixture implements OrderedFixtureInterface
 {
     public function load(ObjectManager $manager)
     {

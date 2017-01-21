@@ -1,11 +1,12 @@
 <?php
 namespace GameBundle\DataFixtures\ORM;
 
+use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use GameBundle\Entity\Soldiers;
 
-class LoadSoldiersData implements OrderedFixtureInterface
+class LoadSoldiersData extends AbstractFixture implements OrderedFixtureInterface
 {
     public function load(ObjectManager $manager)
     {
