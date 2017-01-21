@@ -1,0 +1,24 @@
+soldiers_index:
+    path:     /
+    defaults: { _controller: "GotBundle:Soldiers:index" }
+    methods:  GET
+
+soldiers_show:
+    path:     /{id}/show
+    defaults: { _controller: "GotBundle:Soldiers:show" }
+    methods:  GET
+
+soldiers_new:
+    path:     /new
+    defaults: { _controller: "GotBundle:Soldiers:new" }
+    methods:  [GET, POST]
+
+soldiers_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "GotBundle:Soldiers:edit" }
+    methods:  [GET, POST]
+
+soldiers_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "GotBundle:Soldiers:delete" }
+    methods:  DELETE

@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Soldiers list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Type</th>
+                <th>Cost</th>
+                <th>Hp</th>
+                <th>Strength</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for soldier in soldiers %}
+            <tr>
+                <td><a href="{{ path('soldiers_show', { 'id': soldier.id }) }}">{{ soldier.id }}</a></td>
+                <td>{{ soldier.type }}</td>
+                <td>{{ soldier.cost }}</td>
+                <td>{{ soldier.hp }}</td>
+                <td>{{ soldier.strength }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('soldiers_show', { 'id': soldier.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('soldiers_new') }}">Create a new soldier</a>
+        </li>
+    </ul>
+{% endblock %}
